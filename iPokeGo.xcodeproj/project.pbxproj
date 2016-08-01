@@ -3342,8 +3342,8 @@
 				TargetAttributes = {
 					27F385571D4130B30004A1B3 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = C6D6DBHW5C;
-						DevelopmentTeamName = "Dimitri Dessus";
+						DevelopmentTeam = U7XY9CE3YC;
+						DevelopmentTeamName = "Venta Apps, LLC";
 						ProvisioningStyle = Automatic;
 					};
 					27F385701D4130B30004A1B3 = {
@@ -4566,6 +4566,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -4573,8 +4575,9 @@
 				INFOPLIST_FILE = iPokeGo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dimitri-dessus.iPokeGo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ventaapps.iPokeGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a32efb40-7847-433b-98d3-2dc56e725ed3";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -4590,7 +4593,7 @@
 				INFOPLIST_FILE = iPokeGo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dimitri-dessus.iPokeGo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ventaapps.iPokeGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

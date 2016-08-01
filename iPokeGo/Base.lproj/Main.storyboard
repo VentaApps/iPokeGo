@@ -534,6 +534,7 @@
                         <outlet property="serverField" destination="2Np-Qc-YrV" id="LnN-BD-Q1f"/>
                         <outlet property="serverImageView" destination="BzD-XH-y05" id="jMM-N0-oWr"/>
                         <outlet property="serverLabel" destination="LVj-cE-dT0" id="5al-aT-JTF"/>
+                        <outlet property="settingsTableView" destination="did-u8-DiF" id="Aaa-1Y-HHo"/>
                         <outlet property="timeImageView" destination="Ksc-35-4Uy" id="TA3-1H-5tb"/>
                         <outlet property="timeLabel" destination="noN-PI-lN3" id="lZf-E9-U6l"/>
                         <outlet property="timeSwitch" destination="Gni-TR-O7P" id="7Dj-mL-5GE"/>

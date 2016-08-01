@@ -11,6 +11,7 @@
 #import "Helper.h"
 
 @interface SettingsTableViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *settingsTableView;
 
 @end
 
@@ -22,8 +23,11 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
     [self readSavedState];
-    [Helper hideBanner];
+    
+    self.settingsTableView.contentInset = UIEdgeInsetsMake(0, 0, 54, 0);
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
