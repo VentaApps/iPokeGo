@@ -984,6 +984,15 @@
 		27F4244C1D4684B8007ADEE4 /* ScanPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F4244B1D4684B8007ADEE4 /* ScanPin.png */; };
 		27F4244E1D469710007ADEE4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F4244D1D469710007ADEE4 /* AudioToolbox.framework */; };
 		27F424571D46A246007ADEE4 /* SVPulsingAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F424561D46A246007ADEE4 /* SVPulsingAnnotationView.m */; };
+		81551AC31D4E4E380026AF00 /* MobileAds.m in Sources */ = {isa = PBXBuildFile; fileRef = 81551AC21D4E4E380026AF00 /* MobileAds.m */; };
+		81551AC51D4E4F550026AF00 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81551AC41D4E4F550026AF00 /* RevMobAds.framework */; };
+		81551ACC1D4E51250026AF00 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 81551AC91D4E51250026AF00 /* Helper.m */; };
+		81551ACF1D4E54460026AF00 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81551ACE1D4E54460026AF00 /* AVFoundation.framework */; };
+		81551AD11D4E54580026AF00 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81551AD01D4E54580026AF00 /* CoreLocation.framework */; };
+		81551AD31D4E55380026AF00 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81551AD21D4E55380026AF00 /* StoreKit.framework */; };
+		81551AD51D4E573B0026AF00 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81551AD41D4E573B0026AF00 /* AdSupport.framework */; };
+		8160FB5A1D4E571500C9AADB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8160FB591D4E571500C9AADB /* SystemConfiguration.framework */; };
+		8160FB5C1D4E572400C9AADB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8160FB5B1D4E572400C9AADB /* MediaPlayer.framework */; };
 		A0847DB01D46D12200215DC9 /* icons-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = A0847DAF1D46D12100215DC9 /* icons-hd.png */; };
 		AEFA37EE1D47D04200DEE95C /* pokemon.json in Resources */ = {isa = PBXBuildFile; fileRef = AEFA37F01D47D04200DEE95C /* pokemon.json */; };
 		AEFA37F81D49252100DEE95C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEFA37F61D49252100DEE95C /* Localizable.strings */; };
@@ -2011,6 +2020,17 @@
 		58CA35381D4B792C003B7F85 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		58CA35391D4B792C003B7F85 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ru; path = ru.lproj/pokemon.json; sourceTree = "<group>"; };
 		58CA353A1D4B792C003B7F85 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		81551AC11D4E4E380026AF00 /* MobileAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileAds.h; sourceTree = "<group>"; };
+		81551AC21D4E4E380026AF00 /* MobileAds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileAds.m; sourceTree = "<group>"; };
+		81551AC41D4E4F550026AF00 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
+		81551AC81D4E51250026AF00 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		81551AC91D4E51250026AF00 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		81551ACE1D4E54460026AF00 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		81551AD01D4E54580026AF00 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		81551AD21D4E55380026AF00 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		81551AD41D4E573B0026AF00 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		8160FB591D4E571500C9AADB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8160FB5B1D4E572400C9AADB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A0847DAF1D46D12100215DC9 /* icons-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons-hd.png"; path = "Pokemons/larger/icons-hd.png"; sourceTree = "<group>"; };
 		AE1E273F1D4A8F4900FA1BA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		AE1E27401D4A8F4900FA1BA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -2029,8 +2049,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81551AD51D4E573B0026AF00 /* AdSupport.framework in Frameworks */,
+				8160FB5C1D4E572400C9AADB /* MediaPlayer.framework in Frameworks */,
+				8160FB5A1D4E571500C9AADB /* SystemConfiguration.framework in Frameworks */,
+				81551AD31D4E55380026AF00 /* StoreKit.framework in Frameworks */,
+				81551AD11D4E54580026AF00 /* CoreLocation.framework in Frameworks */,
+				81551ACF1D4E54460026AF00 /* AVFoundation.framework in Frameworks */,
 				27F4244E1D469710007ADEE4 /* AudioToolbox.framework in Frameworks */,
 				27F385901D4133580004A1B3 /* MapKit.framework in Frameworks */,
+				81551AC51D4E4F550026AF00 /* RevMobAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3129,6 +3156,8 @@
 		27F3855A1D4130B30004A1B3 /* iPokeGo */ = {
 			isa = PBXGroup;
 			children = (
+				81551AC61D4E51250026AF00 /* Helpers */,
+				81551ABF1D4E4E380026AF00 /* Libraries */,
 				273604571D440B0900194BAF /* Custom classes */,
 				273604541D44093A00194BAF /* Sounds */,
 				272FCEA71D423F74003ED548 /* Localizations */,
@@ -3180,6 +3209,13 @@
 		27F3858E1D4133580004A1B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81551AD41D4E573B0026AF00 /* AdSupport.framework */,
+				8160FB5B1D4E572400C9AADB /* MediaPlayer.framework */,
+				8160FB591D4E571500C9AADB /* SystemConfiguration.framework */,
+				81551AD21D4E55380026AF00 /* StoreKit.framework */,
+				81551AD01D4E54580026AF00 /* CoreLocation.framework */,
+				81551ACE1D4E54460026AF00 /* AVFoundation.framework */,
+				81551AC41D4E4F550026AF00 /* RevMobAds.framework */,
 				27F4244F1D469A68007ADEE4 /* CoreTelephony.framework */,
 				27F4244D1D469710007ADEE4 /* AudioToolbox.framework */,
 				27F3858F1D4133580004A1B3 /* MapKit.framework */,
@@ -3211,6 +3247,32 @@
 				27F424561D46A246007ADEE4 /* SVPulsingAnnotationView.m */,
 			);
 			name = SVPulsingAnnotationView;
+			sourceTree = "<group>";
+		};
+		81551ABF1D4E4E380026AF00 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				81551AC01D4E4E380026AF00 /* Rev Mob */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		81551AC01D4E4E380026AF00 /* Rev Mob */ = {
+			isa = PBXGroup;
+			children = (
+				81551AC11D4E4E380026AF00 /* MobileAds.h */,
+				81551AC21D4E4E380026AF00 /* MobileAds.m */,
+			);
+			path = "Rev Mob";
+			sourceTree = "<group>";
+		};
+		81551AC61D4E51250026AF00 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				81551AC81D4E51250026AF00 /* Helper.h */,
+				81551AC91D4E51250026AF00 /* Helper.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4323,11 +4385,13 @@
 				0256E38C1D474C5A00CEEE3F /* DistanceLabel.m in Sources */,
 				27F385631D4130B30004A1B3 /* MapViewController.m in Sources */,
 				27F385601D4130B30004A1B3 /* AppDelegate.m in Sources */,
+				81551ACC1D4E51250026AF00 /* Helper.m in Sources */,
 				276FD5571D45742A006E4B96 /* NotificationsSettingsTableViewController.m in Sources */,
 				27F3855D1D4130B30004A1B3 /* main.m in Sources */,
 				273604641D440E4900194BAF /* CWStatusBarNotification.m in Sources */,
 				277209DC1D441CAA0008B7FA /* PokemonSelectTableViewController.m in Sources */,
 				2788622D1D4226D300CCF60E /* PokestopAnnotation.m in Sources */,
+				81551AC31D4E4E380026AF00 /* MobileAds.m in Sources */,
 				0256E3861D473D7800CEEE3F /* TimerLabel.m in Sources */,
 				27F4244A1D468394007ADEE4 /* ScanAnnotation.m in Sources */,
 				0256E3831D473D6A00CEEE3F /* TimeLabel.m in Sources */,
@@ -4502,6 +4566,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iPokeGo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -4515,6 +4583,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iPokeGo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

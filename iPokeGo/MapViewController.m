@@ -10,6 +10,7 @@
 #import "TimeLabel.h"
 #import "TimerLabel.h"
 #import "DistanceLabel.h"
+#import "Helper.h"
 
 @interface MapViewController ()
 
@@ -66,6 +67,7 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }
+    [Helper startAds];
     
 }
 
