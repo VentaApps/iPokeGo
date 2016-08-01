@@ -67,8 +67,12 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }
-    [Helper startAds];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [Helper startAds];
 }
 
 - (void)didReceiveMemoryWarning {

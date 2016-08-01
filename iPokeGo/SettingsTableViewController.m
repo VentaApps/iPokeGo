@@ -8,6 +8,7 @@
 
 #import "SettingsTableViewController.h"
 #import "PokemonSelectTableViewController.h"
+#import "Helper.h"
 
 @interface SettingsTableViewController ()
 
@@ -21,6 +22,7 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
     [self readSavedState];
+    [Helper hideBanner];
 }
 
 - (void)didReceiveMemoryWarning {
