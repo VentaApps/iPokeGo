@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NSUserDefaults+GroundControl.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,6 @@
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.15 green:0.20 blue:0.23 alpha:1.0]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    
     return YES;
 }
 
@@ -44,11 +44,43 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self initializeGroundControl];
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+///////////////////////////////////////////
+#pragma mark - GroundControl
+//////////////////////////////////////////
+- (void)initializeGroundControl {
+    
+    NSURL *url = [NSURL URLWithString:@"http://plists.ventaapps.com/PokeMonGoConfig.txt"];
+//    NSURL *url = [NSURL URLWithString:@"http://web.textfiles.com/destruction/000.txt"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+
+    [[NSUserDefaults standardUserDefaults] registerDefaultsWithURLRequest:request
+     success:^(NSURLRequest *urlRequest, NSHTTPURLResponse *urlResponse, NSDictionary *dict)
+     {
+         if ([dict objectForKey:@"ServerAddress"]) {
+             [[NSUserDefaults standardUserDefaults] setObject:[dict objectForKey:@"ServerAddress"] forKey:@"server_addr"];
+             [[NSUserDefaults standardUserDefaults] synchronize];
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"ServerAddressLoaded"
+                                                                 object:nil userInfo:nil];
+         }
+     }
+     failure:^(NSURLRequest *urlRequest, NSHTTPURLResponse *urlResponse, NSError *error)
+     {
+         //        NSLog(@"Error > %@ with user info %@.", error, [error userInfo]);
+     }];
+//    [[NSUserDefaults standardUserDefaults] registerDefaultsWithURL:url
+//                                                           success:^(NSDictionary *dict) {
+//                                                               // ...
+//                                                           } failure:^(NSError *error) {
+//                                                               // ...
+//                                                           }];
 }
 
 

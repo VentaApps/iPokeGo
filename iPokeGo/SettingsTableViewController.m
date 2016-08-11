@@ -25,6 +25,8 @@
     [self readSavedState];
     
     self.settingsTableView.contentInset = UIEdgeInsetsMake(0, 0, 54, 0);
+    self.serverField.userInteractionEnabled = false;
+    
 }
 
 

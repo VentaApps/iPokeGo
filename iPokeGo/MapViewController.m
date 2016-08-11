@@ -35,6 +35,9 @@
     isVibrationActivated            = NO;
     isViewOnlyFav                   = NO;
     
+//    [[NSUserDefaults standardUserDefaults] setObject:@"http://138.68.60.62:6060" forKey:@"server_addr"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     [self loadAnimatedImages];
     [self loadNavBar];
     [self initObserver];
@@ -42,31 +45,7 @@
     [self loadLocalization];
     [self checkGPS];
     [self loadSoundFiles];
-    self.requestStr             = [self buildRequest];
     
-    if(self.requestStr != nil)
-    {
-        [self launchTimers];
-    }
-    else
-    {
-        UIAlertController *alert = [UIAlertController
-                                    alertControllerWithTitle:NSLocalizedString(@"Server not set", @"The title of an alert that tells the user, that no server was set.")
-                                    message:NSLocalizedString(@"Please go in settings to enter server address", @"The message of an alert that tells the user, that no server was set.")
-                                    preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *ok = [UIAlertAction
-                             actionWithTitle:NSLocalizedString(@"OK", @"A common affirmative action title, like 'OK' in english.")
-                             style:UIAlertActionStyleDefault
-                             handler:^(UIAlertAction * action)
-                             {
-                                 [self performSegueWithIdentifier:@"showSettings" sender:nil];
-                             }];
-        
-        [alert addAction:ok];
-        
-        [self presentViewController:alert animated:YES completion:nil];
-    }
     
 }
 
@@ -79,6 +58,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 -(void)loadNavBar
 {
@@ -99,7 +79,8 @@
 
 -(void)loadAnimatedImages
 {
-    self.animatedPokestopLured = [NSArray arrayWithObjects:[UIImage imageNamed:@"Pokespot-Lured_0023_Frame-1.png"],
+    self.animatedPokestopLured = [NSArray arrayWithObjects:
+                                  [UIImage imageNamed:@"Pokespot-Lured_0023_Frame-1.png"],
                                   [UIImage imageNamed:@"Pokespot-Lured_0022_Frame-2.png"],
                                   [UIImage imageNamed:@"Pokespot-Lured_0021_Frame-3.png"],
                                   [UIImage imageNamed:@"Pokespot-Lured_0020_Frame-4.png"],
@@ -173,6 +154,8 @@
                                     selector:@selector(refreshPokemons)
                                     name:@"RefreshPokemons"
                                     object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkForServer) name:@"ServerAddressLoaded" object:nil];
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
     [self.mapview addGestureRecognizer:longPressGesture];
@@ -324,6 +307,14 @@
 	
     pokemonAppearSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrlPokemonAppearSound error:nil];
     pokemonFavAppearSound = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrlPokemonFavAppearSound error:nil];
+}
+
+-(void)refreshMapWithServerPokes {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadSaveData"
+                                                        object:nil userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LaunchTimers" object:nil userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshPokemons"
+                                                        object:nil userInfo:nil];
 }
 
 -(void)loadLocalization {
@@ -987,6 +978,36 @@
 	
     [self.mapview removeAnnotations:annotations];
     [self.mapview addAnnotations:annotations];
+}
+
+-(void)checkForServer {
+    self.requestStr = [self buildRequest];
+    
+    if(self.requestStr != nil)
+    {
+        [self launchTimers];
+        [self refreshMapWithServerPokes];
+    }
+    else
+    {
+        UIAlertController *alert = [UIAlertController
+                                    alertControllerWithTitle:NSLocalizedString(@"Server not set", @"The title of an alert that tells the user, that no server was set.")
+                                    message:NSLocalizedString(@"Please go in settings to enter server address", @"The message of an alert that tells the user, that no server was set.")
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *ok = [UIAlertAction
+                             actionWithTitle:NSLocalizedString(@"OK", @"A common affirmative action title, like 'OK' in english.")
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [self performSegueWithIdentifier:@"showSettings" sender:nil];
+                             }];
+        
+        [alert addAction:ok];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+
 }
 
 -(void)mapCleaner
